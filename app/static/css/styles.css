@@ -33,7 +33,7 @@ body{
     flex-wrap: wrap;
 }
 
-.auth strong {
+.auth a {
     color: #D1D7E0;
 }
 
@@ -71,3 +71,21 @@ body{
         -ms-user-select: none; /* Internet Explorer/Edge */
             user-select: none;
 }
+
+.pitches_tabs {
+    display: flex ;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.tabp {
+    margin: 5px;
+    width: 10rem;
+    background-color: #564F6F;
+}
+
+.linkp{
+    color: #2D283E !important;
+}
+
