@@ -1,0 +1,38 @@
+body{
+    background-color: #2D283E;
+    color: #2D283E;
+}
+
+.navbar{
+    background-color: #564F6F !important;
+}
+
+.navbar-brand{
+    color: #D1D7E0 !important;
+}
+
+.card {
+    background-color: #D1D7E0;
+}
+
+.pitches {
+    display: flex ;
+    justify-content: space-around ;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 20rem;
+    color: #2D283E;
+    margin: 10px;
+}
+
+.auth {
+    display: flex ;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.auth strong {
+    color: #D1D7E0;
+}

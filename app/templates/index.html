@@ -1,0 +1,26 @@
+{% extends "base.html" %} 
+{% block body %}
+
+<div class="col-md-12">
+    <div class="pitches">
+      {% for pitch in pitches %}
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">{{ pitch.title }}</h5>
+            <p class="card-text">{{ pitch.text }}</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted"
+              >Category: {{ pitch.category }}</small
+            >
+          </div>
+        </div>
+      
+
+      {% endfor %}
+    </div>
+    </div>
+  
+
+
+{% endblock %}
