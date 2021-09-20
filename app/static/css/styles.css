@@ -36,3 +36,38 @@ body{
 .auth strong {
     color: #D1D7E0;
 }
+
+.commentbtn{
+    color: #D1D7E0;
+    background-color: #2D283E;
+    width: 5rem;
+    font-size: 11px;
+    float: right;
+    margin: 5px;
+}
+
+.commentbtn:hover {
+    color: #802BB1 !important;
+}
+
+.upvote{
+    color: #802BB1;
+}
+
+.downvote{
+    color: #4C495D;
+    margin-left: 15px;
+   
+}
+
+.vote {
+    font-size: 15px;
+    float: right;
+    cursor: pointer;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+}
