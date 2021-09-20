@@ -5,13 +5,13 @@ from app import app
 @app.route('/')
 def index():
 
-    pitches = [{'title':'Detergent','category': 'product pitch','text': 'The best detergent in Kenya', 'upvote': 3, 'downvote': 1, 
+    pitches = [{'title':'Detergent','category': 'product pitch','text': 'The best detergent in Kenya', 'upvotes': 3, 'downvotes': 1, 
     },
-    {'title':'Detergent','category': 'product pitch','text': 'The best detergent in Kenya', 'upvote': 3, 'downvote': 1, 
+    {'title':'Detergent','category': 'product pitch','text': 'The best detergent in Kenya', 'upvotes': 3, 'downvotes': 1, 
     },
-   {'title':'Detergent','category': 'product pitch','text': 'The best detergent in Kenya', 'upvote': 3, 'downvote': 1
+   {'title':'Detergent','category': 'product pitch','text': 'The best detergent in Kenya', 'upvotes': 3, 'downvotes': 1
     },
-   {'title':'Detergent','category': 'product pitch','text': 'The best detergent in Kenya', 'upvote': 3, 'downvote': 1,
+   {'title':'Detergent','category': 'product pitch','text': 'The best detergent in Kenya', 'upvotes': 3, 'downvotes': 1,
     }]
 
 
