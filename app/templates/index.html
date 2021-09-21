@@ -25,7 +25,9 @@
         <h5 class="card-title">{{ pitch.title }}</h5>
         <p class="card-text">{{ pitch.pitch }}</p>
       </div>
-      <button type="button" class="btn commentbtn">Comment</button>
+      <button type="button" class="btn commentbtn">
+        <a href="/pitch/comments/{{pitch.id}}">Comment</a>
+      </button>
       <div class="card-footer">
         <small class="text-muted">Category: {{ pitch.category }}</small>
         <span class="text-muted vote">

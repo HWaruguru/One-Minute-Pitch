@@ -66,6 +66,11 @@ class Pitch(db.Model):
         pitches = Pitch.query.all()
         return pitches
 
+    @classmethod
+    def get_pitch(cls, pitch_id):
+        pitch = Pitch.query.filter_by(id=pitch_id).one()
+        return pitch
+
     def __repr__(self):
         return f'User {self.title}'
 

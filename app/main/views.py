@@ -1,9 +1,9 @@
 from flask.helpers import url_for
 from werkzeug.utils import redirect
-from flask import render_template
+from flask import render_template, request
 from flask_login import login_required, current_user
-from app.models import Pitch
-from app.main.forms import PitchForm
+from app.models import Comment, Pitch
+from app.main.forms import CommentForm, PitchForm
 from . import main
 from .. import db
 
@@ -38,3 +38,22 @@ def add_pitch():
 
     title = "Add Pitch"
     return render_template("new_pitch.html", pitch_form=form, title=title)
+
+@main.route("/pitch/comments/<int:id>", methods=['GET','POST'])
+@login_required
+def comments(id):
+    form = CommentForm()
+    pitch = Pitch.get_pitch(id)
+    if request.method == 'GET':
+        comments = pitch.comments
+        return render_template("comments.html", comments=comments, user=current_user, comment_form=form)
+    else:
+        if form.validate_on_submit():
+            comment = Comment(comment=form.comment.data, pitch=pitch, user_id=current_user.id)
+            db.session.add(comment)
+            db.session.commit()
+            # refetch comments
+            comments = pitch.comments
+            # clear form since we are rendering same view
+            form.comment.data = ""
+            return render_template("comments.html", comments=comments, user=current_user, comment_form=form)

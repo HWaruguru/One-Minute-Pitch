@@ -4,7 +4,7 @@ from wtforms.fields.core import SelectField
 from wtforms.validators import Required
 
 class CommentForm(FlaskForm):
-    comment = TextAreaField('comment',validators=[Required()])
+    comment = TextAreaField('Add comment',validators=[Required()])
     submit = SubmitField('Submit')
 
 class PitchForm(FlaskForm):
