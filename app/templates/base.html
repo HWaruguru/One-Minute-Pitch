@@ -31,7 +31,7 @@
                 {% else %}
                     <a class="nav-link " href="{{url_for('auth.login')}}"><i class="fas fa-sign-in-alt"></i>&nbsp;
                         <strong>Sign In</strong></a>
-                    <a class="nav-link" href=""><i class="fas fa-user-plus"></i></i>&nbsp;
+                    <a class="nav-link" href="{{url_for('auth.register')}}"><i class="fas fa-user-plus"></i></i>&nbsp;
                         <strong>Sign Up</strong></a>
                 {% endif %}
             </span>

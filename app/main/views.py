@@ -1,8 +1,8 @@
+from . import main
 from flask import render_template
-from app import app
 
 # Views
-@app.route('/')
+@main.route('/')
 def index():
 
     pitches = [{'title':'Detergent','category': 'product pitch','text': 'The best detergent in Kenya', 'upvotes': 3, 'downvotes': 1, 

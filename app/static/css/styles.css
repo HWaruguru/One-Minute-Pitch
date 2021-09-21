@@ -1,4 +1,4 @@
-body{
+body {
     background-color: #2D283E;
     color: #2D283E;
 }
@@ -88,4 +88,9 @@ body{
 .linkp{
     color: #2D283E !important;
 }
+
+.container {
+    color: #D1D7E0;
+}
+
 
