@@ -2,10 +2,6 @@ import os
 
 
 class Config:
-    SQLALCHEMY_DATABASE_URI = (
-        "postgresql+psycopg2://hannahnjoroge:password@localhost/pitches"
-    )
-
     # email configurations
     MAIL_SERVER = "smtp.googlemail.com"
     MAIL_PORT = 587
@@ -17,7 +13,7 @@ class Config:
     
 
 class ProdConfig(Config):
-    pass
+    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
 
 
 class TestConfig(Config):
