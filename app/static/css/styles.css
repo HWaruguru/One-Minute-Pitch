@@ -54,10 +54,18 @@ body {
     color: #802BB1;
 }
 
-.downvote{
+.upvote a {
+    text-decoration: none;
+    color: #802BB1 !important;
+}
+
+.downvote {
     color: #4C495D;
-    margin-left: 15px;
-   
+    margin-left: 15px;  
+}
+.downvote a {
+    text-decoration: none;
+    color: #4C495D !important;
 }
 
 .vote {

@@ -4,16 +4,16 @@
   <div class="pitches_tabs">
     <ul class="nav nav-tabs">
       <li class="nav-item tabp">
-        <a class="nav-link active linkp" aria-current="page" href="#">All</a>
+        <a class="nav-link linkp" aria-current="page" href="/">All</a>
       </li>
       <li class="nav-item tabp">
-        <a class="nav-link linkp" href="#">Product</a>
+        <a class="nav-link linkp" href="/filter/Product">Product</a>
       </li>
       <li class="nav-item tabp">
-        <a class="nav-link linkp" href="#">Pickup</a>
+        <a class="nav-link linkp" href="/filter/Pickup">Pickup</a>
       </li>
       <li class="nav-item tabp">
-        <a class="nav-link linkp">Interview</a>
+        <a class="nav-link linkp" href="/filter/Interview">Interview</a>
       </li>
     </ul>
   </div>
@@ -31,12 +31,16 @@
       <div class="card-footer">
         <small class="text-muted">Category: {{ pitch.category }}</small>
         <span class="text-muted vote">
-          <span class="upvote"
-            ><i class="fa fa-fw fa-thumbs-up"></i> {{ pitch.upvotes }}</span
-          >
-          <span class="downvote"
-            ><i class="fa fa-fw fa-thumbs-down"></i> {{ pitch.downvotes }}</span
-          >
+          <span class="upvote">
+            <a href="/pitch/{{pitch.id}}/vote/upvote"><i class="fa fa-fw fa-thumbs-up"></i>
+              {{ pitch.upvotes }}
+            </a>
+          </span>
+          <span class="downvote">
+            <a href="/pitch/{{pitch.id}}/vote/downvote"><i class="fa fa-fw fa-thumbs-down"></i>
+              {{ pitch.downvotes }}
+            </a>
+          </span>
         </span>
       </div>
     </div>

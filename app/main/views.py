@@ -98,3 +98,21 @@ def update_pic(uname):
         user.profile_pic_path = path
         db.session.commit()
     return redirect(url_for('main.profile',uname=uname))
+
+
+
+@main.route('/pitch/<int:id>/vote/<vote>', methods=['GET','POST'])
+@login_required
+def vote(id, vote):
+    pitch = Pitch.get_pitch(id)
+    if vote == 'upvote':
+        pitch.upvotes = pitch.upvotes + 1
+    else:
+        pitch.downvotes = pitch.downvotes + 1
+    db.session.commit()
+    return redirect(url_for('main.index'))
+
+@main.route("/filter/<category>")
+def filter_pitches(category):
+    pitches = Pitch.query.filter_by(category = category).all()
+    return render_template("index.html", pitches=pitches)
