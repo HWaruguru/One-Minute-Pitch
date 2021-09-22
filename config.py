@@ -13,7 +13,11 @@ class Config:
     
 
 class ProdConfig(Config):
-    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
+    db_url = os.environ.get('DATABASE_URL')
+    if db_url.startswith('postgres:'):
+        SQLALCHEMY_DATABASE_URI = db_url.replace("://", "ql://", 1)
+    else:
+        SQLALCHEMY_DATABASE_URI = db_url
 
 
 class TestConfig(Config):
